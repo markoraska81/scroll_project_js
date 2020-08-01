@@ -1,0 +1,253 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+
+/* --- header --- */
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url(../banner/banner1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/* --- navbar --- */
+#nav {
+    padding: 10px 20px;
+    background: #fff;
+}
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.fixed-nav .links a {
+    color: #000;
+}
+.fixed-nav .links a:hover {
+    color: #ed1c24;
+}
+.fixed-nav .links-container {
+  height: auto !important;
+}
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo {
+    width: 90px;
+    height: 40px;
+}
+.nav-toggle {
+    border: transparent;
+    background: transparent;
+    color: #ed1c24;;
+    cursor: pointer;
+    outline: none;
+    font-size: 30px;
+    display: block;
+}
+.links-container {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    margin-top: 10px;
+}
+.show-links {
+    height: 185px;
+}
+.links {
+    list-style-type: none;
+}
+.links li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #324d67;
+    transition: all 0.5s linear;
+    letter-spacing: 1px;
+    display: block;
+    padding: 10px 0 10px 0;
+}
+.links li a:hover {
+    padding-left: 15px;
+    color: #fff;
+    background-color: #ed1c24;
+}
+.container {
+    min-height: calc(100vh - 76px);
+    
+    position: relative;
+    background-size: cover;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.container h1 {
+    margin-bottom: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 35px;
+}
+.container p {
+    color: #fff;
+    width: 85%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.container a.scrool-link {
+    margin: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    letter-spacing: 1px;
+    border: solid 1px #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    background: transparent;
+    transition: all 0.3s linear;
+}
+.container a.scrool-link:hover {
+    background: #fff;
+    color: #ed1c24;
+}
+
+/* --- section --- */
+#about, #services, #tours {
+    height: 300px;
+}
+#services {
+    background: #cfc9c9;
+}
+.title h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+.title h2 span {
+    color: #ed1c24;
+}
+
+/* --- footer --- */
+footer {
+    background: #102a42;
+    padding: 90px 35px;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+.top-link {
+    font-size: 20px;
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+    background: #ed1c24;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 5px;
+    color: #fff;
+    visibility: hidden;
+    z-index: -100;
+}
+.show-link {
+    visibility: visible;
+    z-index: 100;
+}
+
+
+@media screen and (min-width: 800px) {
+    #nav {
+        background: transparent;
+    }
+    .nav-center {
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links-container {
+        height: auto !important;
+        display: flex;
+        margin-top: 0;
+    }
+    .links {
+        display: flex;
+    }
+    .links li a {
+        background: transparent;
+        color: #fff;
+        font-size: 20px;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        display: block;
+        transition: all 0.3s linear;
+        margin: 0 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+    .links li a:hover {
+        background: transparent;
+        padding: 0;
+    }
+    .container h1 {
+        margin-bottom: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        font-size: 50px;
+    }
+    .container p {
+        color: #fff;
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .container a.scrool-link {
+        margin: 30px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        letter-spacing: 1px;
+        border: solid 1px #fff;
+        padding: 10px 20px;
+        font-size: 20px;
+        background: transparent;
+        transition: all 0.3s linear;
+    }
+}
+
+
